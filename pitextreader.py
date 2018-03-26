@@ -140,7 +140,7 @@ def getData():
     os.system(cmd)
 
     # OCR to text
-    speak("now working. please wait.")
+    speak("Procesando. Por favor espere.")
     cmd = "/usr/bin/tesseract /tmp/image.jpg /tmp/text"
     logger.info(cmd) 
     os.system(cmd)
@@ -184,7 +184,7 @@ try:
     rt = RaspberryThread( function = stopTTS ) # Stop Speaking text
     
     volume(VOLUME)
-    speak("OK, ready")
+    speak("Listo")
     led(1)
     
     while True:
@@ -195,7 +195,7 @@ try:
     	    rt = RaspberryThread( function = stopTTS ) # Stop Speaking text
             led(1)
 	    time.sleep(0.5)	 
-            speak("OK, ready")
+            speak("Listo")
 	time.sleep(0.2)	 
     
 except KeyboardInterrupt:
